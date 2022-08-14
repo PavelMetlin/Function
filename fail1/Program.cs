@@ -1,4 +1,5 @@
-﻿Console.Write("Введите число: ");
+﻿// задача 1
+Console.Write("Введите число: ");
 string number = Console.ReadLine();
 
 void CheckingNumber(string number)
