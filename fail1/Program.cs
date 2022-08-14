@@ -1,19 +1,17 @@
-﻿
-int FindQuarter(int x, int y);
-{
-    if (x > 0 && y > 0)
-        return 1;
-    else if (x < 0 && y > 0)
-        return 2;
-    else if (x < 0 && y < 0)
-        return 3;
-    else if (x > 0 && y < 0)
-        return 4;
+﻿Console.Write("Введите число: ");
+string number = Console.ReadLine();
 
-    return 0;
+void CheckingNumber(string number)
+{
+    if (number[0] == number[4] || number[1] == number[3])
+    {
+        Console.WriteLine($"Ваше число: {number} - палиндром.");
+    }
+    else Console.WriteLine($"Ваше число: {number} - не палиндром.");
 }
-System.Console.WriteLine(quarter);
-System.Console.WriteLine(FindQuarter(-19,7));
-System.Console.WriteLine(FindQuarter(-1,7));
-System.Console.WriteLine(FindQuarter(-9,-7));
-System.Console.WriteLine(FindQuarter(-5,4));
+
+if (number!.Length == 5)
+{
+    CheckingNumber(number);
+}
+else Console.WriteLine($"Введите правильное число");
